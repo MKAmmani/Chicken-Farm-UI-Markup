@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chicken Farm - Fresh Poultry &amp; Farm Products</title>
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            farmGreen: '#28a745',
+            farmDark: '#1a1a1a',
+            farmLight: '#f8f9fa',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="typography">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+<style data-purpose="layout-helpers">
+    .bg-hero-overlay {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://placehold.co/1920x1080?text=Farm+Background');
+      background-size: cover;
+      background-position: center;
+    }
+    .card-shadow {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-50 bg-white border-b border-gray-100">
+<nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+<!-- Logo -->
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-farmGreen rounded-full flex items-center justify-center text-white font-bold">CF</div>
+<span class="text-xl font-bold text-farmGreen">Chicken Farm</span>
+</div>
+<!-- Navigation Links -->
+<ul class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+<li><a class="text-farmGreen" href="#">Home</a></li>
+<li><a class="hover:text-farmGreen" href="#">About us</a></li>
+<li><a class="hover:text-farmGreen" href="#">Our Products</a></li>
+<li><a class="hover:text-farmGreen" href="#">Contact us</a></li>
+</ul>
+<!-- Action Buttons -->
+<div class="flex items-center gap-6">
+<a class="bg-farmGreen text-white px-6 py-2 rounded-md font-semibold text-sm hover:bg-green-600 transition" href="#">Shop now</a>
+<a class="text-gray-600 font-medium text-sm hover:text-farmGreen" href="#">Log in</a>
+</div>
+</nav>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<section class="bg-hero-overlay min-h-[600px] flex items-center">
+<div class="container mx-auto px-4 py-20 text-white">
+<div class="max-w-2xl">
+<p class="text-farmGreen font-semibold tracking-wider mb-2">WELCOME TO CHICKEN FARM</p>
+<h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+          Your Home Of Fresh <span class="text-yellow-400">Poultry &amp; Farm Products</span> Delivered Same-Day
+        </h1>
+<p class="text-lg mb-8 opacity-90 font-medium">Hygienic • Affordable • Trusted by homes &amp; businesses</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-farmGreen hover:bg-green-600 px-8 py-3 rounded-md font-bold flex items-center gap-2 transition">
+            Order now <span>🚀</span>
+</button>
+<button class="border-2 border-white/50 hover:bg-white/10 px-8 py-3 rounded-md font-bold flex items-center gap-2 transition">
+            Call us <span>📞</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: FeaturesBar -->
+<section class="container mx-auto px-4 -mt-12 relative z-10">
+<div class="bg-white rounded-xl shadow-xl grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x border border-gray-100 overflow-hidden">
+<div class="p-8 flex items-center gap-4">
+<div class="w-12 h-12 bg-green-50 text-farmGreen rounded-full flex items-center justify-center text-2xl">🛡️</div>
+<div>
+<h4 class="font-bold">Secure Packaging</h4>
+<p class="text-xs text-gray-500">Carefully managed</p>
+</div>
+</div>
+<div class="p-8 flex items-center gap-4">
+<div class="w-12 h-12 bg-green-50 text-farmGreen rounded-full flex items-center justify-center text-2xl">🚚</div>
+<div>
+<h4 class="font-bold">Farm to Door Delivery</h4>
+<p class="text-xs text-gray-500">Fresh products for you</p>
+</div>
+</div>
+<div class="p-8 flex items-center gap-4">
+<div class="w-12 h-12 bg-green-50 text-farmGreen rounded-full flex items-center justify-center text-2xl">🏡</div>
+<div>
+<h4 class="font-bold">Local Farm Network</h4>
+<p class="text-xs text-gray-500">Always fresh &amp; local</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: FeaturesBar -->
+<!-- BEGIN: ProductSection -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-farmGreen mb-4">Our Product</h2>
+<p class="text-gray-500 max-w-lg mx-auto text-sm">Fresh farm products, sold in practical quantities for homes and businesses</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<!-- Product Cards -->
+<div class="group border border-gray-100 rounded-lg p-6 text-center hover:border-farmGreen transition-all">
+<img alt="Fresh Fruits" class="mx-auto mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0Ghc9n_8if1vHsghaJFCRhozGpMlPD8mHx7Bvf9yb5T0S1Y70Ds2p8HQQkqPsdSVAJT9dEDhq8GD_LxjxixsqbGwY5QfFxbPBEenW5ND6kIt5ZFeMUH7FRtbOHg9FDIW95kz5Zks13RhFhbQL9kJ98eWri3v5sdaqFj6pIKqiIvccsP6Cp4BiUAaVyOzRZicICEWbj8RydiP04Ul5n4XPR5UUsuxRTiJVhnD3AUpPyxRZQpCABbWWnmyCdKXB-8rBGduF_ckhBI0"/>
+<h4 class="font-bold mb-4">Fresh Fruits</h4>
+<button class="w-full py-2 bg-farmGreen text-white rounded text-xs font-semibold opacity-0 group-hover:opacity-100 transition">Shop now</button>
+</div>
+<div class="group border border-gray-100 rounded-lg p-6 text-center hover:border-farmGreen transition-all">
+<img alt="Vegetables" class="mx-auto mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcI6kiFYWNwqfzqdb6kq95arX2fBotW0kedvhdkZVlnZ5vpkAnGzMoKudlwGuuXZpqK8pN93p6Gb2BFSaby9uhkyzspJh_A_KJs02Yi3asPE5usg1ZeYypW-424SbErCrAszmP23ojgfuFJg4oCzydJLHXLiy30XIPp47dC04GwwgYkbSWzIO6LzgrOber3H8Bur_gPMRnntfo2UuU_ijWarTTbwqwoa39Tb-heaAinS_qF_P8hv7XR3Qi8rdRO7FhL6Dc3q4F_RA"/>
+<h4 class="font-bold mb-4">Vegetables</h4>
+<button class="w-full py-2 bg-farmGreen text-white rounded text-xs font-semibold opacity-0 group-hover:opacity-100 transition">Shop now</button>
+</div>
+<div class="group border border-gray-100 rounded-lg p-6 text-center hover:border-farmGreen transition-all">
+<img alt="Eggs" class="mx-auto mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNsl4OZZKF8viydjHSFDdJEjhcXG1GmdgOnsRBa56xmeWlaHgB6JSBZEvfi42F_FsX-Vm5Jhzzm52xeBzI2EJWLKOJC4o_ZoGmiwkUHP1598Xf9lZyAzd3ZSnk3uzC1LUMPadjllDoi4RBH7ThkjQhQP1T6VRu1RkIUv4k7Q89dOgNYgkTz9QJx1lebiodVkdFEeZrMm1M5MJvP1i29BSM0dS1M876xgH1KIOCKfBcyJBHdZGshnK02YHi6KogDbkbw9_hUSa3FRA"/>
+<h4 class="font-bold mb-4">Eggs</h4>
+<button class="w-full py-2 bg-farmGreen text-white rounded text-xs font-semibold opacity-0 group-hover:opacity-100 transition">Shop now</button>
+</div>
+<div class="group border border-gray-100 rounded-lg p-6 text-center hover:border-farmGreen transition-all">
+<img alt="Fresh Chicken" class="mx-auto mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOVH960p0HHizuR9XYcbKhMf6DBimmAL0i9ziYDUa5V9H6nYrSYcOdX1zAeYbLvwHBjnTbdd4n-yaBAWmghXz3Lfdw47z_QFCOjAZCpSVjosWJEB2YKzvXKEWbakMiwpNseaxCxDWEsTU20HgyX_NJGRGew4zLF8g1D2LpHpM5f49n0eiMyjDUYW9UGv6EIsTavPKZKzrWBiO1kLW7jV9POqg8lg6e7mi6rhKpZNt-DgqOx_YmFnz74JNOwXcGTRu5ov1N7puzBS0"/>
+<h4 class="font-bold mb-4">Fresh Chicken</h4>
+<button class="w-full py-2 bg-farmGreen text-white rounded text-xs font-semibold opacity-0 group-hover:opacity-100 transition">Shop now</button>
+</div>
+<!-- Row 2 -->
+<div class="group border border-gray-100 rounded-lg p-6 text-center hover:border-farmGreen transition-all">
+<img alt="Live Chicken" class="mx-auto mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1gX-BPGSlcMZ3zS99iQXFbjCapbxNgJDqW4oHfOxWGPigX-pDpcHJD2wDetGy-u_84VCNi-lVSnIysqxekMBqjhb5FrP26-RYpUbdHDGWaMkRh5fvEeU8y9hmsGe4xCv4YBiLx0G304PfFa3kWuz2dm2aJ44w6CU58pN2K34NRGCU1IMYrp_D7tAps1LJQhrxwQSX4RvaSMtO-6zWrOA9RiFx8dNiItUCI8Geas9Wn8t5mJRSpfNipbne-cgFOQuqMMQ-NJ5nfmM"/>
+<h4 class="font-bold mb-4">Live chicken</h4>
+<button class="w-full py-2 bg-farmGreen text-white rounded text-xs font-semibold opacity-0 group-hover:opacity-100 transition">Shop now</button>
+</div>
+<div class="group border border-gray-100 rounded-lg p-6 text-center hover:border-farmGreen transition-all">
+<img alt="Fresh Fish" class="mx-auto mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtdeuGoLjzBID1Z55Utp6JRNqcnP9YDBdbKsCrUBWkwGWGW8ELdH4gL3AG73dItvv8RRl6GjfAsG2eEBRivMBKyvjA4k5IxCNA-hDdK8wLbRimB4zNexZplN8ax2JZT7MB5aJ5u_w4AO3XcH1OnincEfGThjsKUbKRjZPir1XM4QZ7wLg0SbVyv7cQcXGg5f6aQimJ1vBGwzrbXoHY8O_wdhVd_IgD45qYQb-tBzc5SvJzYsYumGO0d-Xlz0JrZYHrtEOthlbWPCE"/>
+<h4 class="font-bold mb-4">Fresh Fish</h4>
+<button class="w-full py-2 bg-farmGreen text-white rounded text-xs font-semibold opacity-0 group-hover:opacity-100 transition">Shop now</button>
+</div>
+<div class="group border border-gray-100 rounded-lg p-6 text-center hover:border-farmGreen transition-all">
+<img alt="Roasted Chicken" class="mx-auto mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfnka-oxrs9eOS7MJW8brig9gh-jQeORaa8LmbbV_nriQPraRQ410jVSooaJdIGvPdsyrGmWIb82arITywBE4CrItbIo8W07zWD031Zw8DFJCdXV9knnereL4lBUABdgG4GfEqhU7GLonkvSSt4YzMYRye1fELMk9AdvkUXzshHS0x4TgzwfHL9tcFqkucMuwU9jtp0vlH6gBKCQjas0dKRfMs0gY2QcdlE2iN0Y08hJYkMBJuLIRwMD0md9axqcUUWzCsLnPndxg"/>
+<h4 class="font-bold mb-4">Roasted Chicken</h4>
+<button class="w-full py-2 bg-farmGreen text-white rounded text-xs font-semibold opacity-0 group-hover:opacity-100 transition">Shop now</button>
+</div>
+<div class="group border border-gray-100 rounded-lg p-6 text-center hover:border-farmGreen transition-all">
+<img alt="Staple Farm Produce" class="mx-auto mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqJ6U7cyVflRb-4wJHUteWIs_SQZ6YHorgbeoJ4H6CuDNHEFscIlbfvou0XDIjrbi4lie3ZBkrKHe-nyc3FCBRmEwoyLAppzjvbnVpIgEFCQ7KzpmJ46jWxRAZLGvSjjeq1er0Jz4OzCdhOrPySo7e31_g-YhyZlAB4uClMumwv7hoQyvGnCoZMy1MkcAcjtuphpbRAGk2K5R9jGyBo1LwlsL3dAXEaxUWWZBDd5clsgbq2GHY1siq3fqPg5eUs66EjVPupIEK5X4"/>
+<h4 class="font-bold mb-4">Staple Farm Produce</h4>
+<button class="w-full py-2 bg-farmGreen text-white rounded text-xs font-semibold opacity-0 group-hover:opacity-100 transition">Shop now</button>
+</div>
+</div>
+<div class="mt-12 text-center">
+<a class="text-farmGreen font-bold flex items-center justify-center gap-2 hover:underline" href="#">
+          See all <span class="text-xl">»</span>
+</a>
+</div>
+</div>
+</section>
+<!-- END: ProductSection -->
+<!-- BEGIN: AboutUsSection -->
+<section class="py-24 bg-white overflow-hidden">
+<div class="container mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="grid grid-cols-2 gap-4">
+<img alt="Farmer" class="rounded-lg shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw9cdaCYgOQAkqWaPA_XByR1MZYQSElJaVENgs-EYOrsirIhzzdV4wVgUcJAMGNyFtegrSughRcPrRHtW3mi_Hs4rhdsgct7aFoCl152wjPnwzTrCB11lJuE3K2LO6tFu9Cn-2amjl8xX6B4s4fJb21twORbayteP1K9ewqRxLj8Fq0yNOhDBZZhUbo99NPCbhfGOoqVI2O0gD7wLw1UG672XPD2XdScgVdI_2L8Klp84bR06Q2eNxlVS6mp1gH0mGexs40Plufa8"/>
+<img alt="Harvest" class="rounded-lg shadow-lg mt-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoP2fQstRRDGg9hVthuq_oZ_R0z_9hMSLyahDFDVAXFBT-vXbgFkcv0AZo8GGSn_dF6v4MWsoORdxL3Pd3NJg6xtRMKn7Cshfs5a4VTDvuxuD1tLFzgsCf48XM514NFvloR_MWQMb-8q4m9hXwQCcOLwJncNtlbLfPLWMNpwH-f2luUgfy4UTy5rJSax-d6yDeITXlVpC-QfVp9bamATWZofkuPb4-TTg9LMlhZ_ZhnpGb_4ZYUC1oF-IwPdAcjvAmaeMUI18eXE"/>
+</div>
+<!-- Decorative blob -->
+<div class="absolute -z-10 -top-10 -left-10 w-64 h-64 bg-green-100 rounded-full opacity-50"></div>
+</div>
+<div>
+<h3 class="text-farmGreen font-bold mb-2">About us</h3>
+<h2 class="text-4xl font-extrabold mb-6 leading-tight">The Best Agriculture Market</h2>
+<p class="text-farmGreen font-semibold mb-4 italic">There are many variations of passages of lorem available, but the majority have suffered alteration.</p>
+<p class="text-gray-500 mb-8 leading-relaxed">There are many variations of passages of lorem available, but the majority have suffered alteration in some form by injected humour or random which don't look even.</p>
+<ul class="space-y-3 mb-10">
+<li class="flex items-center gap-3 text-sm font-medium"><span class="text-farmGreen">✓</span> Suspe ndisse suscipit sagitlis leo</li>
+<li class="flex items-center gap-3 text-sm font-medium"><span class="text-farmGreen">✓</span> Entum estibulum dignissim posuere</li>
+<li class="flex items-center gap-3 text-sm font-medium"><span class="text-farmGreen">✓</span> Lorem Ipsum on the tend to repeat</li>
+</ul>
+<button class="bg-farmGreen text-white px-8 py-3 rounded-md font-bold hover:bg-green-600 transition">Discover More</button>
+</div>
+</div>
+</section>
+<!-- END: AboutUsSection -->
+<!-- BEGIN: StatsBar -->
+<section class="bg-green-50 py-16">
+<div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-3xl font-extrabold text-gray-800 max-w-sm">
+        Growing crops and raising livestock.
+      </div>
+<div class="flex gap-16">
+<div class="text-center">
+<div class="text-4xl font-extrabold text-orange-400">38K</div>
+<div class="text-xs font-bold text-gray-500 uppercase tracking-widest mt-1">Trusted Customers</div>
+</div>
+<div class="text-center border-l border-gray-200 pl-16">
+<div class="text-4xl font-extrabold text-orange-400">28M</div>
+<div class="text-xs font-bold text-gray-500 uppercase tracking-widest mt-1">Growth Tons Of Harvest</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: StatsBar -->
+<!-- BEGIN: WhyChooseUs -->
+<section class="py-24 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-farmGreen mb-4">Why Choose Us</h2>
+<p class="text-gray-500 text-sm">Fresh farm products, sold in practical quantities for homes and businesses</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-orange-50/50 p-8 rounded-2xl border border-orange-100 flex flex-col items-center text-center">
+<img alt="Same day" class="rounded-xl mb-6 w-full object-cover h-48" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQwAYqqCFd8h-YALYQNr6CdWkHKSjFDG5xKogn6sYrhHwCtvImhrccrPBlYiCGq26ljpIrCUgoqUztxp6Dd7g3JRArGyEkO7BPo6tINsfFYxkHGQpQ3bBa9QFC7tR9Iz-LOKz5zXTmhzVVorQyXqUAnomeCdApLXiezilLAC3uAThzKVuhZnDMbFVGb1xSU3ccF1N_-0gafvFC7atx1q-OGr6AKu7y6CBvvgs02aBW5RIK4Zt_KQKgkgUbgm6Po4K5ioRoZ3X9khc"/>
+<h3 class="text-orange-500 font-extrabold mb-4 uppercase tracking-tighter">Same-Day Delivery</h3>
+<p class="text-sm text-gray-600 leading-relaxed">We prepare and deliver your order quickly so you receive fresh product without delay</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-blue-50/50 p-8 rounded-2xl border border-blue-100 flex flex-col items-center text-center">
+<img alt="Trusted" class="rounded-xl mb-6 w-full object-cover h-48" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVrAoVHGLP8UPwTTUyGSu88B6rGkig3_Aut2cfVNjFMXc3gLNFL9W4NSAARTevMg0p8NvuftUdA5fxTVRV_EyRjLhj_hdrzNMyAefy2Wc93NSGYp4mARFumC7zNseAMTSISRa9dqLJLi4PYfDk2Cyzriua-7U-X50uzwA2mha86aSHVfKZhGMFCkTrXse7SOJtFipA7y8wWVVfP17V6LT0hJdkCpikFiq27IxjuFq1yNnPdql1gsY5zML4UUXmmaD1khcqrSc1jMs"/>
+<h3 class="text-blue-900 font-extrabold mb-4 uppercase tracking-tighter">Trusted by Homes &amp; Businesses</h3>
+<p class="text-sm text-gray-600 leading-relaxed">Families, restaurants, and buyers rely on us for consistent supply and dependable service</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-green-50/50 p-8 rounded-2xl border border-green-100 flex flex-col items-center text-center">
+<img alt="Hygienic" class="rounded-xl mb-6 w-full object-cover h-48" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDauCmIDdaEZdvI3EaYviu-PmzK49yVvWrmNtNrJ6MbCY5QHvo9SWcl_kEpbU5c31RzBgANV67P3sHA9vaOPtLyDnKlgjHrJgI7drOzaqtvTEToIeSd9Xvf-lZeTKo8ofu7cvAKz82MBG-nVVUhvX1jl850Q-v5e-mkvn9t4iMmMPBKFnZhkfbBNcH4-MYFWEgXEkx07an2tiJJPmA6CjRooLFDANOzPfU2HcgNkiDmZZUXGF8RlyC9Uzfe1JgNO9Oue9PI2pKoBTc"/>
+<h3 class="text-farmGreen font-extrabold mb-4 uppercase tracking-tighter">Fresh &amp; Hygenic</h3>
+<p class="text-sm text-gray-600 leading-relaxed">Farm products carefully handled to ensure quality and safety from farm to delivery</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: WhyChooseUs -->
+<!-- BEGIN: BannerCTA -->
+<section class="container mx-auto px-4 py-12 grid md:grid-cols-2 gap-8">
+<div class="bg-yellow-400 rounded-2xl p-10 flex justify-between items-center text-white relative overflow-hidden group">
+<div class="z-10">
+<p class="text-xs font-bold uppercase mb-2">100% Organic</p>
+<h3 class="text-3xl font-extrabold mb-6 leading-tight">Quality Organic<br/>Food Store</h3>
+<button class="bg-white text-yellow-500 px-6 py-2 rounded-full text-xs font-bold uppercase hover:bg-gray-100 transition">Order Now</button>
+</div>
+<img alt="Store" class="w-40 h-40 object-contain group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6gYfSmV6jwQH0QwTh9Ec-PvFcBFxa6mMTiEXI5DcTe_mX_ffWCV4pVrGi7AcY_k3wflAb1nniN060NnuShy000jiG-2qDL75W-1qbEhkCDb1W6bU74XR3Qpy8_ifq3PCqJDUmrE9EKsyLNE-Feeb3oa1Z3w3app2y3cRenZo9y0ZJ-EJF401edrVgGxMiqKosZ-IF78z8tAQe1VbwullnXs2oio3dL9az-rambsAVIOat8H4gqxhGmbf8bFIj-Z4JFrM3odiyvVQ"/>
+</div>
+<div class="bg-farmGreen rounded-2xl p-10 flex justify-between items-center text-white relative overflow-hidden group">
+<div class="z-10">
+<p class="text-xs font-bold uppercase mb-2">100% Organic</p>
+<h3 class="text-3xl font-extrabold mb-6 leading-tight">Healthy Products<br/>Everyday</h3>
+<button class="bg-white text-farmGreen px-6 py-2 rounded-full text-xs font-bold uppercase hover:bg-gray-100 transition">Order Now</button>
+</div>
+<img alt="Healthy" class="w-40 h-40 object-contain group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjVakL9datz_YhY1LoJ4iWsf9WaSsALCYV9khgtedqMC915KJgUgiuEGBzHs78xExYMC_fC3-5jR1KD_xeyghVoxjMrHF6TL9o5Gjmc8va10xrDXemL-NOy71EVi9_Oy0XaYkZnsULz7QeYPK9UXLfEPecPVycrOiv2NFd59xq6bywe1TL78RPtfGCGNcb10zev0InWGybWC0eCiNerm7N1d4j0ay1jlvCCxfNaDDzwGZ7exwjFyJHxjPxj1UYST7yYUeUxISDy2k"/>
+</div>
+</section>
+<!-- END: BannerCTA -->
+<!-- BEGIN: BigOrganicCTA -->
+<section class="py-20 bg-cover bg-center text-white" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuDjZl6uT9ppDPoAleMf-OCbllyXdoK5YH-_KecRCyQA-kdF9cmc1F0g38pKCCU_Q-tvyN0dtd0ivp9Tb0BGWgw1840T6enHIp1Hybs6ob2fMZZw8Ge2AjDgNMXfAJHBoUffAM_L3cH27wxKBmWM5tn42Aob7M7blKvYCm0egdVRl8zYAHAGLb0e0AvzEa7wxsHQCKRbs0qPVdN60w-cv8QUiNrVUpcmhBaCr_Cego_zAVY40TMQHfQrJLlHhzB4CKmjb5Zvq0kXL_A')">
+<div class="container mx-auto px-4 text-center">
+<h2 class="text-4xl md:text-5xl font-extrabold mb-8 max-w-3xl mx-auto">Be Healthy &amp; Eat Only Fresh Organic Vegetables</h2>
+<button class="bg-farmGreen hover:bg-green-600 px-10 py-4 rounded-md font-bold text-lg transition shadow-lg">Shop Now</button>
+</div>
+</section>
+<!-- END: BigOrganicCTA -->
+<!-- BEGIN: HowItWorks -->
+<section class="py-24 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-farmGreen mb-4">How it works</h2>
+<p class="text-gray-500 text-sm">Order your fresh farm products, sold in practical quantities for homes and businesses</p>
+</div>
+<div class="relative flex flex-col md:flex-row justify-between items-center gap-12 max-w-5xl mx-auto">
+<!-- Step Connector Line -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-200 -z-10"></div>
+<!-- Step 1 -->
+<div class="flex flex-col items-center bg-white p-8 border border-gray-100 rounded-xl card-shadow w-full md:w-72">
+<div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-md">
+<span class="text-2xl">🔍</span>
+</div>
+<h4 class="font-bold mb-2">Choose your product</h4>
+<p class="text-xs text-gray-400 text-center">Browse and select what you need</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center bg-white p-8 border border-gray-100 rounded-xl card-shadow w-full md:w-72">
+<div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-md">
+<span class="text-2xl">🛒</span>
+</div>
+<h4 class="font-bold mb-2">Choose your product</h4>
+<p class="text-xs text-gray-400 text-center">Browse and select what you need</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center bg-white p-8 border border-gray-100 rounded-xl card-shadow w-full md:w-72">
+<div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-md">
+<span class="text-2xl">📦</span>
+</div>
+<h4 class="font-bold mb-2">Choose your product</h4>
+<p class="text-xs text-gray-400 text-center">Browse and select what you need</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HowItWorks -->
+<!-- BEGIN: Testimonials -->
+<section class="py-24 bg-green-50/30">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<p class="text-farmGreen font-bold uppercase text-xs tracking-widest mb-2">Testimonials</p>
+<h2 class="text-3xl font-bold text-gray-800">What people say?</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-white p-10 rounded-2xl card-shadow flex flex-col items-center text-center opacity-50 scale-95">
+<p class="text-gray-500 text-sm leading-relaxed mb-8 italic">"Greatest consultation discover apartments, indulgence off under fully death wrote cause her way spite. Plan upon yet lady..."</p>
+<img alt="Avatar" class="w-12 h-12 rounded-full mb-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBCRK9GF4x1m5A4NJQ9Hktq1mI38kFib9NEO0fRtJoeMCzOuV2LetyTmqR44QrtV5Cb3_RPjC97jKVKbVLIriam1W_-qE55MNPtAZq7KAHJFqsuX1IQRudXBBdKbM2nIbMAg1RF9_iFR64qNbeEEvj07G8wLiumi1uMkvYVuGYgVlvsVemSUmCnVBWvtjtXsvoCun1sMa0jEqQNP6uLfxVB1KkXeLTZw-y8gc7W6rYm_dwD8aKkqxCXKbWXWHjhTSrys3CQjOuLRs"/>
+<h4 class="font-bold">Mary Mary</h4>
+</div>
+<!-- Testimonial 2 (Main) -->
+<div class="bg-white p-10 rounded-2xl shadow-2xl flex flex-col items-center text-center relative z-10 border-t-4 border-farmGreen">
+<div class="text-yellow-400 mb-4 flex gap-1">★★★★★</div>
+<p class="text-gray-600 font-medium leading-relaxed mb-8">"Greatest consultation discover apartments, indulgence off under fully death wrote cause her way spite. Plan upon yet lady get cold spot its week. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from..."</p>
+<img alt="Avatar" class="w-16 h-16 rounded-full border-4 border-white shadow-lg mb-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWHbPP5GsmHZzrCysJ85PwBHLx3wbhnU4RRaQVeOBdoMejb_V4TrTr6j7YNIKVRo3VCEwg6GJIZac6FRBJL0WrF_2J1o4iIRFrPc_gg0VJaKhbDa_A7dlbfMQ5VcUbdBWwyEjuyIAHiY1PN_cGgT4mAYFMVUP9nWW8plBCMGSo7mnxzWEgyit4d-9LlLErIVp1vDIk9VnAFRgXbc3LQueTgtvilsrZqGqrKHXSu0fe7Tp3Xk9sdbyZx2RcbdiAp8Mezgqn8XS30gk"/>
+<h4 class="font-bold text-farmGreen text-lg">Aliya Mary</h4>
+<p class="text-xs text-gray-400">Regular Customer</p>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-white p-10 rounded-2xl card-shadow flex flex-col items-center text-center opacity-50 scale-95">
+<p class="text-gray-500 text-sm leading-relaxed mb-8 italic">"Greatest consultation discover apartments, indulgence off under fully death wrote cause her way spite. Plan upon yet lady..."</p>
+<img alt="Avatar" class="w-12 h-12 rounded-full mb-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvxtYja9FaMp2IHM5ZQvi4a4X3WVXUcgbXBiFrDaUCGKccpZAk8r3oonP1k08fRUHyeO73TS7yKj2KUnV_KXXOPWKvRX0nNjYTyzxTCH95jF5fbTCX5mb7lU-NrNzz_Zd9WIC7o7aBZbLwtnXpirCPrHXktvjqekQGiTuMMGVkVuw3xOlZkutv56vxpCnfyhDkZEARASeUbSs_QFXgiI2ydPmu7so-yP1nwE3le8FZKh4hujDPRf4UjiHnFsQum5OTQf3ZJrvvrSg"/>
+<h4 class="font-bold">John Doe</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Testimonials -->
+<!-- BEGIN: ContactSection -->
+<section class="py-24 bg-white">
+<div class="container mx-auto px-4 grid md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-gray-100 shadow-xl">
+<!-- Map Area -->
+<div class="h-[500px] w-full bg-gray-100">
+<img alt="Map" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD123ouoO_0ED3U27FK4908l69SYkTtQfPItuTSWi5x2KqoTmEkRjWi9AdBSSUycx-YkmUMDVviK9ew9QDEO_38JFaXwLtdRK4hMuR9GRYOmY-qC8VAfU9OpNQY3mAgpvYKA4JrbupN_AgKLLtb3q4NcFU5THnuThu48Eh8_yAJSpKB98wzhhv-YvpIa5sBtpFcGmyNrcJYrq-arbQDu-zbrf9LW63sb3DTMko4YOFYuDusLdhs9E7p_qpru8_8lwh8Y0TFMwrbQWs"/>
+</div>
+<!-- Form Area -->
+<div class="p-12 bg-white flex flex-col justify-center">
+<p class="text-farmGreen font-bold text-xs uppercase mb-2">Contact Us</p>
+<h2 class="text-3xl font-bold mb-8">Write a Message</h2>
+<form class="space-y-6">
+<div class="grid grid-cols-2 gap-4">
+<input class="p-4 bg-gray-50 border-none rounded-lg focus:ring-2 focus:ring-farmGreen text-sm" placeholder="Name" type="text"/>
+<input class="p-4 bg-gray-50 border-none rounded-lg focus:ring-2 focus:ring-farmGreen text-sm" placeholder="Email Address" type="email"/>
+</div>
+<textarea class="w-full p-4 bg-gray-50 border-none rounded-lg focus:ring-2 focus:ring-farmGreen text-sm" placeholder="Write a Message" rows="4"></textarea>
+<button class="bg-farmGreen text-white px-10 py-4 rounded-lg font-bold hover:bg-green-600 transition w-fit">Send a Message</button>
+</form>
+</div>
+</div>
+</section>
+<!-- END: ContactSection -->
+<!-- BEGIN: Footer -->
+<footer class="bg-farmDark text-gray-400 py-20">
+<div class="container mx-auto px-4">
+<div class="grid md:grid-cols-3 gap-16">
+<!-- Brand -->
+<div>
+<div class="flex items-center gap-2 mb-8">
+<div class="w-10 h-10 bg-farmGreen rounded-full flex items-center justify-center text-white font-bold">CF</div>
+<span class="text-xl font-bold text-farmGreen">Chicken Farm</span>
+</div>
+<p class="text-sm leading-relaxed mb-8">There are many variations of passages of lorem available, but the majority have suffered.</p>
+<div class="flex gap-4">
+<a class="w-8 h-8 rounded-full border border-gray-700 flex items-center justify-center hover:bg-farmGreen hover:border-farmGreen transition" href="#">f</a>
+<a class="w-8 h-8 rounded-full border border-gray-700 flex items-center justify-center hover:bg-farmGreen hover:border-farmGreen transition" href="#">t</a>
+<a class="w-8 h-8 rounded-full border border-gray-700 flex items-center justify-center hover:bg-farmGreen hover:border-farmGreen transition" href="#">i</a>
+<a class="w-8 h-8 rounded-full border border-gray-700 flex items-center justify-center hover:bg-farmGreen hover:border-farmGreen transition" href="#">p</a>
+</div>
+</div>
+<!-- Explore -->
+<div>
+<h4 class="text-white font-bold mb-8">Explore</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-farmGreen transition" href="#">• About</a></li>
+<li><a class="hover:text-farmGreen transition" href="#">• Services</a></li>
+<li><a class="hover:text-farmGreen transition" href="#">• Our Projects</a></li>
+<li><a class="hover:text-farmGreen transition" href="#">• Meet the Farmers</a></li>
+<li><a class="hover:text-farmGreen transition" href="#">• Contact</a></li>
+</ul>
+</div>
+<!-- Contact -->
+<div>
+<h4 class="text-white font-bold mb-8">Contact</h4>
+<ul class="space-y-4 text-sm">
+<li class="flex items-start gap-4">
+<span class="text-farmGreen">📍</span>
+<span>122/B New Street, London, UK</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="text-farmGreen">📞</span>
+<span>+1 234 567 890</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="text-farmGreen">✉️</span>
+<span>chickenfarm@company.com</span>
+</li>
+<li class="pt-4">
+<div class="flex">
+<input class="bg-gray-800 border-none rounded-l p-3 text-xs w-full" placeholder="Email Address" type="email"/>
+<button class="bg-farmGreen text-white px-4 rounded-r font-bold">➔</button>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-20 pt-8 flex flex-col md:flex-row justify-between text-xs">
+<p>© Copyright 2023 by WING-IT</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="hover:text-white" href="#">Terms of Use</a>
+<a class="hover:text-white" href="#">Privacy Policy</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+</body></html>

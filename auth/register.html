@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Create an Account - Chicken Farm</title>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts for accurate typography -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style data-purpose="typography">
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+<style data-purpose="layout">
+    /* Custom styles for decorative background elements */
+    .tomato-decoration {
+      position: absolute;
+      top: 40px;
+      right: 120px;
+      width: 180px;
+      z-index: -1;
+      opacity: 0.8;
+    }
+    .broccoli-decoration {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 350px;
+      z-index: -1;
+    }
+    @media (max-width: 1024px) {
+      .tomato-decoration, .broccoli-decoration {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body class="bg-white min-h-screen flex flex-col items-center justify-start py-12 px-4 relative overflow-x-hidden">
+<!-- BEGIN: Decorative Background Images -->
+<!-- Tomato illustration in top right -->
+<img alt="Tomato Illustration" class="tomato-decoration" data-purpose="background-illustration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwgwmdOHQ159yLtXVXCAV4WbyupAeLmyMKBrMVasrX3oZY3JOffAtuUpV5rfN2q6ZX1U2LuMVq10-6DRrIsF7I6leg5QFe6jEr6YEfybpklrjnFRuoTCkWAHTrVCFnrAFuQChRtt3AwaGx9tjfiQPFUZ2-T3pgS2OELcGldq9WxiTuLSGaQHDpmZYQ4FCqNQxTqhwff4PR6AN8bG5lZXOasx3lplwUOqpcSzNDQjLJWQRsAPMl_0RwoVfwbzUNWVV9yeQkwgCcMHU"/>
+<!-- Broccoli/Vegetable illustration in bottom right -->
+<img alt="Vegetable Illustration" class="broccoli-decoration" data-purpose="background-illustration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvs0N1CvMqROtPcTm4o0fxJxMiWqf6dPaR7nqui39zxLR_rw6Sfh9FijCtGTUX6Ry9o86_vyeo8xg6HfRJGuqmBXWbhyEQlgXFz_gzGzeJ3jEzZfIrLg8XHCDNjuDDgs2elLQrFnrxDEvFC92tKXajODJzpgfWtAneDccsZM2h4Q5oOBBlGSqq-pCctYaCwaEPOpvXOo3RIvabhYOjFThJohM58eNPox88gOgy21qH3NrhNI5FMCDqw8T6aGRkUlpx0bw5wjG4BfY"/>
+<!-- END: Decorative Background Images -->
+<!-- BEGIN: Registration Container -->
+<main class="w-full max-w-md flex flex-col items-center" data-purpose="registration-card">
+<!-- BEGIN: Header Section -->
+<header class="text-center mb-10">
+<!-- Logo placeholder for Chicken Farm -->
+<div class="mb-4 flex justify-center">
+<img alt="Chicken Farm Logo" class="h-16 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8NqzHrLyjzJn4Dom7NLfoUus45lZp_GweJymEg29XIcdvlgfDcDRg9WwXFT-lgSwC1E6GthLQb0QiMl1N7pq7iF9tWPqBZ32Cz35-4WHQdPjGc1aQqibDXTkdnvbHRedn_u04E5ttFQQUkkZncWwsxsXoTDgMCjnQANNwlhxEp3tBsMMZshCkzBLfSJbhA_g5hcZf4tdzepoPyhnEQH0KS0-h8c2jnY7ddg27pdmKimJnUrfQBhnLKxHNeG4t-6rvf25KVkoVsDA"/>
+</div>
+<h1 class="text-3xl font-bold text-gray-800 mb-2">Create an Account</h1>
+<p class="text-gray-500 font-medium">Please enter your details to login</p>
+</header>
+<!-- END: Header Section -->
+<!-- BEGIN: Signup Form -->
+<form action="#" class="w-full space-y-5" method="POST">
+<!-- Full Name Field -->
+<div class="flex flex-col gap-2">
+<label class="text-[15px] font-semibold text-gray-700" for="full-name">Full name</label>
+<input class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-green-500 focus:border-transparent placeholder:text-gray-300 text-gray-600 transition-all" id="full-name" name="full-name" placeholder="John doe" type="text"/>
+</div>
+<!-- Email Field -->
+<div class="flex flex-col gap-2">
+<label class="text-[15px] font-semibold text-gray-700" for="email">Email</label>
+<input class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-green-500 focus:border-transparent placeholder:text-gray-300 text-gray-600 transition-all" id="email" name="email" placeholder="hellomasqlT@gmail.com" type="email"/>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-2 relative">
+<label class="text-[15px] font-semibold text-gray-700" for="password">Password</label>
+<div class="relative">
+<input class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-green-500 focus:border-transparent placeholder:text-gray-300 text-gray-600 transition-all" id="password" name="password" placeholder="••••••••••••" type="password"/>
+<button aria-label="Toggle password visibility" class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.036 12.322a1.012 1.012 0 0 1 0-.644C3.414 7.066 7.729 4.167 12 4.167c4.271 0 8.586 2.899 9.964 7.511a1.012 1.012 0 0 1 0 .644c-1.378 4.509-5.693 7.408-9.964 7.408-4.271 0-8.586-2.899-9.964-7.511Z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- Confirm Password Field -->
+<div class="flex flex-col gap-2 relative">
+<label class="text-[15px] font-semibold text-gray-700" for="confirm-password">Confirm password</label>
+<div class="relative">
+<input class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-green-500 focus:border-transparent placeholder:text-gray-300 text-gray-600 transition-all" id="confirm-password" name="confirm-password" placeholder="••••••••••••" type="password"/>
+<button aria-label="Toggle password visibility" class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.036 12.322a1.012 1.012 0 0 1 0-.644C3.414 7.066 7.729 4.167 12 4.167c4.271 0 8.586 2.899 9.964 7.511a1.012 1.012 0 0 1 0 .644c-1.378 4.509-5.693 7.408-9.964 7.408-4.271 0-8.586-2.899-9.964-7.511Z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- Terms and Conditions Checkbox -->
+<div class="flex items-center gap-3 py-2">
+<input class="w-5 h-5 rounded border-gray-300 text-green-600 focus:ring-green-500" id="terms" name="terms" type="checkbox"/>
+<label class="text-sm text-gray-600" for="terms">
+          I accept <a class="underline text-gray-800 font-medium" href="#">Terms and Conditions</a>
+</label>
+</div>
+<!-- Sign Up Button -->
+<button class="w-full bg-[#1ab000] hover:bg-green-700 text-white font-bold py-4 rounded-xl shadow-sm transition-colors mt-4 text-lg" type="submit">
+        Sign up
+      </button>
+</form>
+<!-- END: Signup Form -->
+<!-- BEGIN: Social Divider -->
+<div class="w-full flex items-center gap-4 my-8" data-purpose="form-divider">
+<div class="flex-grow h-px bg-gray-200"></div>
+<span class="text-gray-400 text-sm font-medium">OR</span>
+<div class="flex-grow h-px bg-gray-200"></div>
+</div>
+<!-- END: Social Divider -->
+<!-- BEGIN: Social Login -->
+<button class="w-full flex items-center justify-center gap-3 bg-[#f1f1f1] hover:bg-gray-200 py-4 rounded-xl transition-colors mb-8" data-purpose="google-login-button" type="button">
+<!-- Google Logo Icon -->
+<svg height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 12-4.53z" fill="#EA4335"></path>
+</svg>
+</button>
+<!-- END: Social Login -->
+<!-- BEGIN: Footer Links -->
+<footer class="text-center">
+<p class="text-gray-600 font-medium">
+        Have an account? <a class="text-blue-500 font-bold hover:underline" href="#">Log in</a>
+</p>
+</footer>
+<!-- END: Footer Links -->
+</main>
+<!-- END: Registration Container -->
+</body></html>

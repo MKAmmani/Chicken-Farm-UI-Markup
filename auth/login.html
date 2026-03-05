@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login - Chicken Farm</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Custom Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandGreen: '#00a800',
+            brandGray: '#f0f0f0',
+            textMuted: '#6b7280',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-layouts">
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      overflow-x: hidden;
+    }
+    /* Absolute positioning for background decorative elements */
+    .deco-cow {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      width: 250px;
+      opacity: 0.8;
+      z-index: -1;
+    }
+    .deco-veggies {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 400px;
+      z-index: -1;
+    }
+    @media (max-width: 768px) {
+      .deco-cow, .deco-veggies {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body class="bg-white min-h-screen flex items-center justify-center relative p-4">
+<!-- BEGIN: Decorative Elements -->
+<!-- Cow Illustration Placeholder -->
+<div class="deco-cow" data-purpose="background-decoration-top">
+<img alt="Cow Illustration" class="w-full h-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVveN1T0EtVFnSkPU2KMR1-1miOJpj59Nbnv1tZvzoHmb6XhkFrKm97S7Ka7ThaQCuJGBZ0UnFYKc23Jigv8XtH3l_AGX8iQU8R7-5Cu2nMEMGymdvhKux-VHRpQZxDp-H6Bsn5tWD2E6VKSrn1Eyt4qFJwzFtNO7w7ynx1pK6wnXodjQhk5c39RMPBS61gYL3HEkPhWxSFBsXRBKHdL093HRLyVJt-GoBOxgQHRwPfy4TB3gKU0YYqZwBhzDHEYqa1Ur4mjgT6BQ"/>
+</div>
+<!-- Vegetable/Broccoli Illustration Placeholder -->
+<div class="deco-veggies" data-purpose="background-decoration-bottom">
+<img alt="Vegetable Illustration" class="w-full h-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHWfzg03FlxPDWoKPHhvNL8c01E_vLh023_a_y-0qOeGhgj1rItxAAswBDMekRIlOJ83wGpPJJeLCaRcP1NQp8lcG_N0aHbNTeJj5HlAMA6wFw_dmCUX6RCSjn7s_jgv1MccBMhOj1ki-rLQv8UIhLyT7laMIekHN8hS231WVPA887bYYa7OcP6RsiFZ-S4PDMVTKDtpodV9PjwrNeTGUYL04fHS4esMP9JS2Ex4TfYqiOnFJOTF4pX66U3dYgEMBoJF4gh5BDk6Y"/>
+</div>
+<!-- END: Decorative Elements -->
+<!-- BEGIN: Login Container -->
+<main class="w-full max-w-md bg-white z-10" data-purpose="login-form-container">
+<!-- BEGIN: Header Section -->
+<header class="text-center mb-10">
+<div class="flex justify-center mb-4">
+<!-- Logo Placeholder using the provided source for Chicken Farm logo -->
+<img alt="Chicken Farm Logo" class="h-20 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuijP5feo95kUhuCzlFft9vkbZ2HKs0pJ_T6JutoFqKQgtkfU57PzBOqXSDQBjylY20O4chdhcTQNCG2KfHdynVm572tCeD7bghCgamPTjYyrruAA3lUqCdhgyltcFCXqzLGxS0yVxpBtXcn4LSIiQnBeyVUaRNWhfQ1uO1mJPQaqrbHAtoM_YaTt6I8HMEc8s9BuM4_h7BBe5zfhQXA6vAo5J0hKDTFMC_KoiowFzVCAyYdwak21b9ZWBtWrONnOaYzVTImWqxtY" style="clip-path: inset(80px 600px 1150px 600px);"/>
+<!-- Fallback or alternative if clip-path isn't ideal for the prompt context -->
+<!-- <div class="font-bold text-2xl">CHICKEN <span class="text-green-600">FARM</span></div> -->
+</div>
+<h1 class="text-3xl font-bold text-gray-800 mb-2">Welcome back</h1>
+<p class="text-gray-500">Please enter your details to login</p>
+</header>
+<!-- END: Header Section -->
+<!-- BEGIN: Login Form -->
+<form action="#" class="space-y-6" method="POST">
+<!-- Email Field -->
+<div data-purpose="input-group">
+<label class="block text-sm font-semibold text-gray-700 mb-2" for="email">Email</label>
+<input class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brandGreen focus:border-transparent outline-none transition-all placeholder:text-gray-400" id="email" name="email" placeholder="hellomasqIT@gmail.com" type="email"/>
+</div>
+<!-- Password Field -->
+<div data-purpose="input-group">
+<div class="flex justify-between items-center mb-2">
+<label class="block text-sm font-semibold text-gray-700" for="password">Password</label>
+<a class="text-xs font-semibold text-blue-500 hover:underline" href="#">Forgotten password?</a>
+</div>
+<div class="relative">
+<input class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brandGreen focus:border-transparent outline-none transition-all tracking-widest" id="password" name="password" type="password" value="............"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600" type="button">
+<!-- Visibility Icon -->
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.036 12.322a1.012 1.012 0 0 1 0-.644C3.483 8.653 7.073 5.917 12 5.917c4.917 0 8.517 2.736 9.964 5.761a1.012 1.012 0 0 1 0 .644c-1.447 3.025-4.997 5.761-9.964 5.761-4.917 0-8.517-2.736-9.964-5.761Z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- Remember Me -->
+<div class="flex items-center">
+<input class="w-5 h-5 text-brandGreen border-gray-300 rounded focus:ring-brandGreen" id="remember" name="remember" type="checkbox"/>
+<label class="ml-2 text-sm font-medium text-gray-600" for="remember">Remember me</label>
+</div>
+<!-- Login Button -->
+<button class="w-full bg-brandGreen text-white py-4 rounded-xl font-bold text-lg hover:bg-green-700 transition-colors shadow-sm" type="submit">
+        Login
+      </button>
+<!-- OR Separator -->
+<div class="relative flex items-center justify-center py-4">
+<div class="flex-grow border-t border-gray-200"></div>
+<span class="flex-shrink mx-4 text-sm text-gray-400 font-medium">OR</span>
+<div class="flex-grow border-t border-gray-200"></div>
+</div>
+<!-- Google Login -->
+<button class="w-full flex items-center justify-center gap-3 bg-brandGray py-4 rounded-xl font-semibold text-gray-700 hover:bg-gray-200 transition-colors border border-gray-100" type="button">
+<img alt="Google" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXL-BKw_QJxLbwKjWTR8PhZ995Zq53OYIuA6DTT0mG1pL47EOXWX97KFzuW_I_2ugo8Thh2WRvPjn1YzwFTgMrOUNDIVhA33B1dw50cqFejL_OGOFv1h-aFrnJmIpxQqH7OxQoUoKLvybo2yxUjvFg7m8r1Yh767ggskrl6uAbWsqJSQACbojGBBDTrlQkBlPGYb8VbBmVkS56SZFQ0U2G2L-tBEV7-0d5ELPiPJgIoM4KJvXr1yQq5Kt2v6Wmk-1nrB_DlcHLGe4"/>
+<!-- Text is empty in UI but visually implied/centered by logo -->
+</button>
+<!-- Footer Links -->
+<div class="text-center pt-6">
+<p class="text-gray-700 font-medium">
+          Don’t have an acoount? <a class="text-blue-400 hover:underline" href="#">Register</a>
+</p>
+</div>
+</form>
+<!-- END: Login Form -->
+</main>
+<!-- END: Login Container -->
+<script data-purpose="interactivity">
+    // Script for basic UI behavior like password visibility toggle could go here
+    document.querySelector('button[type="button"]').addEventListener('click', function() {
+      const pwd = document.getElementById('password');
+      pwd.type = pwd.type === 'password' ? 'text' : 'password';
+    });
+  </script>
+</body></html>
