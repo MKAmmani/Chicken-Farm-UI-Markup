@@ -1,0 +1,273 @@
+/* ==========================================
+   CSS Reset & Base Styles
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fcfcfc;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* View Wrappers (Handling SPA Toggle) */
+.view-wrapper {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.view-wrapper.active {
+    display: flex;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================
+   Decorative Background Images
+   ========================================== */
+.deco {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    transition: all 0.3s ease;
+}
+
+/* Login Decorations */
+.deco-cow          { top: -40px;  right: -20px; width: 180px; opacity: 0.8; }
+.deco-plants-login { bottom: -60px; right: -30px; width: 220px; }
+
+/* Register Decorations */
+.deco-tomatoes        { top: -30px;  right: -10px; width: 150px; }
+.deco-plants-broccoli { bottom: -60px; right: -30px; width: 280px; }
+
+/* ==========================================
+   Main Form Container
+   ========================================== */
+.form-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+    position: relative;
+}
+
+/* Header / Logo Area */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.header img {
+    height: 65px;
+    width: auto;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+.header h1 {
+    font-size: 24px;
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.header p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Form Elements */
+.form-group { margin-bottom: 20px; }
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.input-wrapper { position: relative; }
+
+.form-control {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+.form-control::placeholder { color: #bbb; }
+.form-control:focus {
+    border-color: #0fb300;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(15, 179, 0, 0.1);
+}
+
+/* Password specific styling */
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.label-row label { margin-bottom: 0; }
+.forgot-link {
+    font-size: 13px;
+    color: #4da6e7;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.forgot-link:hover { color: #2980b9; }
+
+.eye-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+    transition: color 0.2s;
+}
+.eye-icon:hover { color: #333; }
+
+/* Checkbox Area */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #0fb300;
+}
+.checkbox-group label {
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+.checkbox-group label a {
+    color: #333;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn:hover  { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.btn:active { transform: translateY(0); }
+.btn-primary { background-color: #0fb300; color: white; }
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 25px 0;
+    color: #888;
+    font-size: 13px;
+    font-weight: 500;
+}
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #eaeaea;
+}
+.divider::before { margin-right: 15px; }
+.divider::after  { margin-left: 15px; }
+
+/* Google Button */
+.btn-google {
+    background-color: #f8f9fa;
+    color: #3c4043;
+    border: 1px solid #e0e0e0;
+}
+.btn-google img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #666;
+}
+.footer a {
+    color: #4da6e7;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.footer a:hover { color: #2980b9; text-decoration: underline; }
+
+/* ==========================================
+   RESPONSIVE MOBILE STYLES
+   ========================================== */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 15px;
+        background-color: #ffffff;
+    }
+
+    .form-container {
+        padding: 30px 20px;
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
+    }
+
+    .deco { opacity: 0.15; z-index: 0; }
+    .deco-cow          { top: -10px;  right: -10px; width: 120px; }
+    .deco-tomatoes     { top: -10px;  right: 0;     width: 100px; }
+    .deco-plants-login { bottom: -20px; right: -20px; width: 150px; }
+    .deco-plants-broccoli { bottom: -20px; right: -20px; width: 200px; }
+
+    .header h1 { font-size: 22px; }
+    .btn { padding: 14px; }
+}
+
+/* Extra small phones */
+@media screen and (max-width: 480px) {
+    .form-container { padding: 20px 10px; }
+    .header img { height: 50px; }
+    .deco { display: none; }
+}
